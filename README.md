@@ -39,7 +39,7 @@ base_path = "/home/user/datasets/benchmark1/"
 __2\. Create info.csv__
 
 ```
-python -m src.create_info
+python -m scripts.create_info.py
 ```
 
 Please make sure you have modified the variable "base_path" in src/const.py, otherwise you may encounter a FileNotFound error. After the script finishes, you will find a file named "info.csv" in your "base_path".
@@ -49,14 +49,14 @@ __3. Train the model__
 To train the landmark branch solely, run:
 
 ```
-python -m src.train --conf src.conf.lm
+python -m src.train.py --conf src.conf.lm.py
 ```
 
 
 To train the landmark branch and the category/attribute prediction network jointly, run:
 
 ```
-python -m src.train --conf src.conf.whole
+python -m src.train.py --conf src.conf.whole.py
 ```
 
 

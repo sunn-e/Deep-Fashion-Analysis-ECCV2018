@@ -4,6 +4,10 @@ import pandas as pd
 import os
 import re
 from src.const import base_path
+import sys
+sys.path.insert(0, '~/src')
+
+import const
 
 partition = pd.read_csv(base_path + 'Eval/list_eval_partition.txt', skiprows=1, sep='\s+')
 

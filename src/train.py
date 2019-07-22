@@ -1,3 +1,4 @@
+# coding: utf-8
 from src.dataset import DeepFashionCAPDataset
 from src.const import base_path
 import pandas as pd

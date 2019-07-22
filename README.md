@@ -6,7 +6,7 @@ This repository is the code for [*Deep Fashion Analysis with Feature Map Upsampl
 
 ### Requirements
 
-Python 3, PyTorch >= 0.4.0, and make sure you have installed TensorboardX:
+Python 3, PyTorch >= 0.4.0 Gpu version is preferable. (, and make sure you have installed TensorboardX:
 
 ```
 pip install tensorboardX
@@ -32,7 +32,9 @@ Please modify the variable "base_path" in src/const.py correspondingly:
 
 ```
 # in src/const.py
+
 base_path = "/home/user/datasets/benchmark1/"
+
 ```
 
 
@@ -46,17 +48,19 @@ Please make sure you have modified the variable "base_path" in src/const.py, oth
 
 __3. Train the model__
 
+For simplicity , get inside the 'src' folder. Use 'cd src'. 
+
 To train the landmark branch solely, run:
 
 ```
-python -m src.train.py --conf src.conf.lm.py
+python -m train.py --conf lm.py
 ```
 
 
 To train the landmark branch and the category/attribute prediction network jointly, run:
 
 ```
-python -m src.train.py --conf src.conf.whole.py
+python -m train.py --conf conf.whole.py
 ```
 
 
